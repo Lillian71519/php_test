@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <title>帳戶管理</title>
@@ -9,7 +9,7 @@
 	帳戶管理
 	</p>
 	<p>
-	  <a href="join.php">新增帳戶</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="join.php">新增帳戶</a>&nbsp;&nbsp;
     </p>
 	
 	<form>
