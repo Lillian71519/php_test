@@ -1,0 +1,4 @@
+1.)安裝XAMPP並開啟
+2.)啟動Apache和MySQL
+3.)將網頁的資料夾放到XAMPP安裝路徑底下的htdocs裡面（C:\xampp\htdocs）
+4.)開啟瀏覽器輸入http://localhost/phptest/index.php

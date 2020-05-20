@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>帳戶管理</title>
@@ -9,7 +9,7 @@
 	帳戶管理
 	</p>
 	<p>
-	  <a href="join.php">新增帳戶</a>&nbsp;&nbsp;
+	  <a href="join.php">新增帳戶</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
 	
 	<form>
@@ -44,10 +44,40 @@
       <a href="delete.php">刪除</a>&nbsp;&nbsp;
 	  <input type="text" name="id1">
     </p>
-	
-	<frameset rows="60, *" border="0">
-	<frame name="bottom" noresize="record.php">
-	</frameset>
+	<p align="center">
+	帳戶清單
+	</p>
+	<?php
+   $mysqli = new mysqli("localhost", "root", "", "php_test");
+
+      if ($mysqli->connect_errno)
+        die("無法建立資料連接: " . $mysqli->connect_error);
+
+      $mysqli->query("SET NAMES utf8");
+      $result = $mysqli->query("SELECT * FROM account_info");
+
+      echo "<table border='1' align='center'><tr align='center'>";
+      // 顯示欄位名稱
+      while ($field = $result->fetch_field())   
+        echo "<td>" . $field->name . "</td>";
+
+      echo "</tr>";
+
+      while ($row = $result->fetch_row())
+      {
+        echo "<tr>";
+
+        for ($i = 0; $i < $result->field_count; $i++)
+          echo "<td>" . $row[$i] . "</td>";
+
+        echo "</tr>";
+      }
+
+      echo "</table>";
+
+      $result->free();
+      $mysqli->close();
+    ?>
 
 
   </body>
