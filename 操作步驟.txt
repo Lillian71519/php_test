@@ -2,5 +2,5 @@
 2.)啟動Apache和MySQL
 3.)將網頁的資料夾放到XAMPP安裝路徑底下的htdocs裡面（C:\xampp\htdocs）
 4.)開啟瀏覽器輸入http://localhost/phpmyadmin/
-5.)在資料庫的欄位點"新增"->"匯入"欄位，選擇phptest資料夾裡的php_test.sql後執行
+5.)在資料庫的欄位點"新增"->"匯入"，選擇phptest資料夾裡的php_test.sql後執行
 6.)在瀏覽器新分頁輸入http://localhost/phptest/index.php
